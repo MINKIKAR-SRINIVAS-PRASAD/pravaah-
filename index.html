@@ -1,68 +1,120 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FEST - PRAVAAH</title>
-  <link href="style.css" rel="stylesheet">
-  
-</head><body>
-  <video class="video-bg" autoplay muted loop playsinline>
-    <source src="loading.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  <header class="navbar">
-    <div class="logo">PRAVAAH</div>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#events">Events</a></li>
-        <li><a href="#workshops">Workshops</a></li>
-        <li><a href="#sponsors">Sponsors</a></li>
-        <li><a href="#register">Register</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>  <section class="hero" id="home">
-    <div class="hero-text">
-      <h1>Welcome to the fest PRAVAAH</h1>
-      <p>The Ultimate Techno cult-Management Fest</p>
-      <a href="#register" class="cta-button">Register Now</a>
-    </div>
-  </section>  <section class="section" id="events">
-    <h2>Events</h2>
-    <p>Technical, Management, and Cultural events to inspire and challenge you.</p>
-    <div class="slider">
-      <img src="https://www.blueavenue.com.au/wp-content/uploads/2021/03/private-singer.jpg" alt="Event 1">
-      <img src="https://media.istockphoto.com/id/472328791/vector/silhouette-of-singer-and-crowd-on-rock-concert-illustration.jpg?s=612x612&w=0&k=20&c=nT9TvLkxIhmLZ2Ttq1Y6TY2UBABaWwgEnXqRpN1kELY=" alt="Event 2">
-      <img src="https://static.vecteezy.com/system/resources/thumbnails/066/600/197/small/a-woman-singing-into-a-microphone-at-a-concert-photo.jpeg" alt="Event 3">
-    </div>
-  </section>  <section class="section" id="workshops">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PRAVAAH Fest</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Fullscreen video preloader -->
+  <div id="video-preloader">
+    <video id="intro-video" autoplay muted playsinline>
+      <source src="loading.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Main content (hidden during video) -->
+  <div id="main-content">
+    <header class="navbar">
+      <div class="logo">PRAVAAH</div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#workshops">Workshops</a></li>
+          <li><a href="#sponsors">Sponsors</a></li>
+          <li><a href="#register">Register</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!--text and registration button-->
+
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <h1>Welcome to the fest PRAVAAH</h1>
+        <p>The Ultimate Techno cult-Management Fest</p>
+        <a href="#register" class="cta-button">Register Now</a>
+      </div>
+    </section>
+    <!--events content-->
+
+    <section class="section" id="events">
+   <div class="slider">
+  <img src="https://www.blueavenue.com.au/wp-content/uploads/2021/03/private-singer.jpg" alt="Event 1" onclick="describeEvent('🎤 Live music performance with talented artists.')">
+  <img src="https://media.istockphoto.com/id/472328791/vector/silhouette-of-singer-and-crowd-on-rock-concert-illustration.jpg?s=612x612&w=0&k=20&c=nT9TvLkxIhmLZ2Ttq1Y6TY2UBABaWwgEnXqRpN1kELY=" alt="Event 2" onclick="describeEvent('🎶 An electrifying concert with top performers and DJ acts.')">
+  <img src="https://static.vecteezy.com/system/resources/thumbnails/066/600/197/small/a-woman-singing-into-a-microphone-at-a-concert-photo.jpeg" alt="Event 3" onclick="describeEvent('🎙 Solo singing competition for all aspiring vocalists.')">
+</div>
+<!--workshop content-->
+
+ <section class="section" id="workshops">
     <h2>Workshops</h2>
     <p>Learn from experts and upgrade your skills in hands-on sessions.</p>
     <div class="slider">
       <img src="https://jmreidgroup.com/wp-content/uploads/2019/12/bigstock-Office-Workers-Sitting-At-Roun-288911857.jpg" alt="Workshop 1">
       <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjfeU49APx-oCOoGEw3u3P3M5ccF4jpufV82pwgMcsfPfsl4jaK54zeU-G0UjxTBGaWMi5rOcQ1NozXp5wZz2fyH_D3oO8lpras5n3mUjLMrQzmtJYw75buWGIFcB2czx93OsVq5hZecHE/s1600/work-shop-la-gi.jpg" alt="Workshop 2">
     </div>
-  </section>  <section class="section" id="sponsors">
+     </section> 
+    <!--sponsers content-->
+
+  <section class="section" id="sponsors">
     <h2>Our Sponsors</h2>
     <p>Supported by leading companies and institutions.</p>
     <div class="slider">
       <img src="https://img1.wsimg.com/isteam/ip/c76862d1-4b72-4973-80c5-7d12414010ec/Sponsorluk2.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1240,h:620,cg:true" alt="Sponsor 1">
       <img src="https://blog.10times.com/wp-content/uploads/2023/12/Trade-show_Sponsor.png" alt="Sponsor 2">
     </div>
-  </section>  <section class="section" id="register">
+    </section> 
+<!--registeration content-->
+
+   <section class="section" id="register">
     <h2>Register for PRAVAAH</h2>
     <form id="registrationForm">
       <input type="text" placeholder="Your Name" required>
       <input type="email" placeholder="Your Email" required>
       <input type="text" placeholder="College Name" required>
+      <input type="number" placeholder="mobile number" required>
       <textarea placeholder="Message or Events Interested In"></textarea>
       <button type="submit">Submit</button>
     </form>
-  </section>  <section class="section" id="contact">
+  </section>
+  <!--contact us--> 
+  
+  <section class="section" id="contact">
     <h2>Contact Us</h2>
     <p>Email: srinivasminki@gmail.com</p>
-    <p>mobile number :7671****35 </p>
+    <p>mobile number :7671**35 </p>
     <P>name : M.SRINIVAS PRASAD</P>
-  </section>  <footer>
+  </section> 
+  <!-- copy rights-->
+  
+  <footer>
     <p>&copy; 2025 PRAVAAH Fest. All rights reserved.</p>
-  </footer> 
+  </footer>
+  </div>
+
+  <!-- Script to hide preloader after video ends -->
+  <script>
+    const introVideo = document.getElementById('intro-video');
+    const preloader = document.getElementById('video-preloader');
+    const mainContent = document.getElementById('main-content');
+
+    document.body.style.overflow = 'hidden'; // disable scroll
+
+    introVideo.addEventListener('ended', () => {
+      preloader.style.display = 'none';
+      mainContent.style.display = 'block';
+      document.body.style.overflow = 'auto'; // enable scroll 
+    });
+
+    // If video fails to load (fallback)
+    setTimeout(() => {
+      preloader.style.display = 'none';
+      mainContent.style.display = 'block';
+      document.body.style.overflow = 'auto';
+    }, 15000); // fallback timeout
+  </script>
+</body>
+</html>
