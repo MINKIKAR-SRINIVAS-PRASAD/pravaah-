@@ -5,28 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PRAVAAH Fest</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- Fullscreen video preloader -->
-  <div id="video-preloader">
-    <video id="intro-video" autoplay muted playsinline>
-      <source src="loading.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-  </div>
+  
+  <!-- Intro video container -->
+<div id="intro-container">
+  <video id="intro-video" muted playsinline>
+    <source src="loading page.mp4" type="video/mp4" />
+  </video>
+</div>
+
+<!-- Background video -->
+<video id="background-video" autoplay muted loop playsinline>
+  <source src="vecteezy_loop-glow-gold-fire-particles-falling-down-animation-background_41166232.mp4" type="video/mp4" />
+</video>
+
 
   <!-- Main content (hidden during video) -->
   <div id="main-content">
     <header class="navbar">
-      <div class="logo">PRAVAAH</div>
+      <div class="logo">
+  <img src="logo.png" alt="PRAVAAH Logo">
+</div>
+
       <nav>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#events">Events</a></li>
-          <li><a href="#workshops">Workshops</a></li>
-          <li><a href="#sponsors">Sponsors</a></li>
-          <li><a href="#register">Register</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#home">​🇭​​🇴​​🇲​​🇪​</a></li>
+          <li><a href="events.html">​🇪​​🇻​​🇪​​🇳​​🇹​​🇸​</a></li>
+          <li><a href="workshop.html">​🇼​​🇴​​🇷​​🇰​​🇸​​🇭​​🇴​​🇵​​🇸​</a></li>
+          <li><a href="sponsers.html">🇸​​🇵​​🇴​​🇳​​🇸​​🇴​​🇷​​🇸​</a></li>
+          <li><a href="registration.html">​🇷​​🇪​​🇬​​🇮​​🇸​​🇹​​🇪​​🇷​</a></li>
+          <li><a href="contact.html">🇨​​🇴​​🇳​​🇹​​🇦​​🇨​​🇹​</a></li>
         </ul>
       </nav>
     </header>
@@ -34,23 +44,26 @@
 
     <section class="hero" id="home">
       <div class="hero-text">
-        <h1>Welcome to the fest PRAVAAH</h1>
+        <h1>ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛʜᴇ ꜰᴇꜱᴛ 𝒫𝑅𝒜𝒱𝒜𝒜𝐻</h1>
         <p>The Ultimate Techno cult-Management Fest</p>
-        <a href="#register" class="cta-button">Register Now</a>
+        <a href="registration.html" class="cta-button">​🇷​​🇪​​🇬​​🇮​​🇸​​🇹​​🇪​​🇷​ ​🇳​​🇴​​🇼​</a>
       </div>
     </section>
     <!--events content-->
 
     <section class="section" id="events">
+      <h2>🇪​​🇻​​🇪​​🇳​​🇹​​🇸</h2>
+    <p>Technical, Management and Cultural events to inspire and challenge you.</p>
    <div class="slider">
   <img src="https://www.blueavenue.com.au/wp-content/uploads/2021/03/private-singer.jpg" alt="Event 1" onclick="describeEvent('🎤 Live music performance with talented artists.')">
   <img src="https://media.istockphoto.com/id/472328791/vector/silhouette-of-singer-and-crowd-on-rock-concert-illustration.jpg?s=612x612&w=0&k=20&c=nT9TvLkxIhmLZ2Ttq1Y6TY2UBABaWwgEnXqRpN1kELY=" alt="Event 2" onclick="describeEvent('🎶 An electrifying concert with top performers and DJ acts.')">
   <img src="https://static.vecteezy.com/system/resources/thumbnails/066/600/197/small/a-woman-singing-into-a-microphone-at-a-concert-photo.jpeg" alt="Event 3" onclick="describeEvent('🎙 Solo singing competition for all aspiring vocalists.')">
 </div>
+
 <!--workshop content-->
 
  <section class="section" id="workshops">
-    <h2>Workshops</h2>
+    <h2>🇼​​🇴​​🇷​​🇰​​🇸​​🇭​​🇴​​🇵​​🇸</h2>
     <p>Learn from experts and upgrade your skills in hands-on sessions.</p>
     <div class="slider">
       <img src="https://jmreidgroup.com/wp-content/uploads/2019/12/bigstock-Office-Workers-Sitting-At-Roun-288911857.jpg" alt="Workshop 1">
@@ -60,7 +73,7 @@
     <!--sponsers content-->
 
   <section class="section" id="sponsors">
-    <h2>Our Sponsors</h2>
+    <h2>ᴏᴜʀ 🇸​​🇵​​🇴​​🇳​​🇸​​🇴​​🇷​​🇸​</h2>
     <p>Supported by leading companies and institutions.</p>
     <div class="slider">
       <img src="https://img1.wsimg.com/isteam/ip/c76862d1-4b72-4973-80c5-7d12414010ec/Sponsorluk2.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1240,h:620,cg:true" alt="Sponsor 1">
@@ -70,7 +83,7 @@
 <!--registeration content-->
 
    <section class="section" id="register">
-    <h2>Register for PRAVAAH</h2>
+    <h2>ʀᴇɢɪꜱᴛᴇʀ ꜰᴏʀ ᴘʀᴀᴠᴀᴀʜ</h2>
     <form id="registrationForm">
       <input type="text" placeholder="Your Name" required>
       <input type="email" placeholder="Your Email" required>
@@ -79,42 +92,21 @@
       <textarea placeholder="Message or Events Interested In"></textarea>
       <button type="submit">Submit</button>
     </form>
+
   </section>
   <!--contact us--> 
   
   <section class="section" id="contact">
-    <h2>Contact Us</h2>
+    <h2>ᴄᴏɴᴛᴀᴄᴛ ᴜꜱ</h2>
     <p>Email: srinivasminki@gmail.com</p>
     <p>mobile number :7671**35 </p>
     <P>name : M.SRINIVAS PRASAD</P>
   </section> 
   <!-- copy rights-->
-  
   <footer>
     <p>&copy; 2025 PRAVAAH Fest. All rights reserved.</p>
   </footer>
   </div>
 
-  <!-- Script to hide preloader after video ends -->
-  <script>
-    const introVideo = document.getElementById('intro-video');
-    const preloader = document.getElementById('video-preloader');
-    const mainContent = document.getElementById('main-content');
-
-    document.body.style.overflow = 'hidden'; // disable scroll
-
-    introVideo.addEventListener('ended', () => {
-      preloader.style.display = 'none';
-      mainContent.style.display = 'block';
-      document.body.style.overflow = 'auto'; // enable scroll 
-    });
-
-    // If video fails to load (fallback)
-    setTimeout(() => {
-      preloader.style.display = 'none';
-      mainContent.style.display = 'block';
-      document.body.style.overflow = 'auto';
-    }, 15000); // fallback timeout
-  </script>
 </body>
 </html>
