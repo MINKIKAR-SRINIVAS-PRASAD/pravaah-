@@ -1,112 +1,283 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PRAVAAH Fest</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
-</head>
-<body>
-  
-  <!-- Intro video container -->
-<div id="intro-container">
-  <video id="intro-video" muted playsinline>
-    <source src="loading page.mp4" type="video/mp4" />
-  </video>
-</div>
+/* Background video */
+    #background-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100vw;
+      min-height: 100vh;
+      width: auto;
+      height: auto;
+      z-index: -1;
+      object-fit: cover;
+      filter: brightness(0.6);
+      pointer-events: none;
+    }
+body, html {
+    margin: 0; padding: 0; height: 100vh; width: 100vw; overflow: hidden;
+  }
+  #intro-container {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: black;
+    z-index: 9999;
+  }
+  #intro-video {
+    width: 100%; height: 100%;
+    object-fit: cover;
+  }
+  #main-content {
+    display: none;
+    padding: 20px;
+  }
+ /* Video preloader styles */
+    #video-preloader {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(226, 11, 11, 0.838);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    #video-preloader video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    #video-preloader.fade-out {
+      animation: fadeOut 1s forwards;
+    }
+    @keyframes fadeOut {
+      from { opacity: 1; }
+      to   { opacity: 0; visibility: hidden; }
+    }
 
-<!-- Background video -->
-<video id="background-video" autoplay muted loop playsinline>
-  <source src="vecteezy_loop-glow-gold-fire-particles-falling-down-animation-background_41166232.mp4" type="video/mp4" />
-</video>
+.logo img {
+  width: 70%;      /* make it fill the parent */
+  height: auto;     /* keeps the same ratio */
+  max-width: 200px; /* optional: limit max size */
+  display: block;   /* removes unwanted gaps */
+}
 
 
-  <!-- Main content (hidden during video) -->
-  <div id="main-content">
-    <header class="navbar">
-      <div class="logo">
-  <img src="logo.png" alt="PRAVAAH Logo">
-</div>
 
-      <nav>
-        <ul>
-          <li><a href="#home">​🇭​​🇴​​🇲​​🇪​</a></li>
-          <li><a href="events.html">​🇪​​🇻​​🇪​​🇳​​🇹​​🇸​</a></li>
-          <li><a href="workshop.html">​🇼​​🇴​​🇷​​🇰​​🇸​​🇭​​🇴​​🇵​​🇸​</a></li>
-          <li><a href="sponsers.html">🇸​​🇵​​🇴​​🇳​​🇸​​🇴​​🇷​​🇸​</a></li>
-          <li><a href="registration.html">​🇷​​🇪​​🇬​​🇮​​🇸​​🇹​​🇪​​🇷​</a></li>
-          <li><a href="contact.html">🇨​​🇴​​🇳​​🇹​​🇦​​🇨​​🇹​</a></li>
-        </ul>
-      </nav>
-    </header>
-    <!--text and registration button-->
+    /* Main content hidden initially */
+    #main-content {
+      display: none;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0);
+      min-height: 100vh;
+      position: relative;
+      z-index: 1;
+    }
+/* Example content style */
+    h1, p {
+      text-align: center;
+    }
 
-    <section class="hero" id="home">
-      <div class="hero-text">
-        <h1>ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛʜᴇ ꜰᴇꜱᴛ 𝒫𝑅𝒜𝒱𝒜𝒜𝐻</h1>
-        <p>The Ultimate Techno cult-Management Fest</p>
-        <a href="registration.html" class="cta-button">​🇷​​🇪​​🇬​​🇮​​🇸​​🇹​​🇪​​🇷​ ​🇳​​🇴​​🇼​</a>
-      </div>
-    </section>
-    <!--events content-->
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+  .section {
+  background-color: rgba(0, 0, 0, 0); /* semi-transparent black */
+  padding: 80px 20px;
+  text-align: center;
+}
+}
 
-    <section class="section" id="events">
-      <h2>🇪​​🇻​​🇪​​🇳​​🇹​​🇸</h2>
-    <p>Technical, Management and Cultural events to inspire and challenge you.</p>
-   <div class="slider">
-  <img src="https://www.blueavenue.com.au/wp-content/uploads/2021/03/private-singer.jpg" alt="Event 1" onclick="describeEvent('🎤 Live music performance with talented artists.')">
-  <img src="https://media.istockphoto.com/id/472328791/vector/silhouette-of-singer-and-crowd-on-rock-concert-illustration.jpg?s=612x612&w=0&k=20&c=nT9TvLkxIhmLZ2Ttq1Y6TY2UBABaWwgEnXqRpN1kELY=" alt="Event 2" onclick="describeEvent('🎶 An electrifying concert with top performers and DJ acts.')">
-  <img src="https://static.vecteezy.com/system/resources/thumbnails/066/600/197/small/a-woman-singing-into-a-microphone-at-a-concert-photo.jpeg" alt="Event 3" onclick="describeEvent('🎙 Solo singing competition for all aspiring vocalists.')">
-</div>
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #a4858500;
+  color: rgba(0, 156, 195, 0.8);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
 
-<!--workshop content-->
+.navbar .logo {
+  font-size: 60px;
+  font-weight: bold;
+}
 
- <section class="section" id="workshops">
-    <h2>🇼​​🇴​​🇷​​🇰​​🇸​​🇭​​🇴​​🇵​​🇸</h2>
-    <p>Learn from experts and upgrade your skills in hands-on sessions.</p>
-    <div class="slider">
-      <img src="https://jmreidgroup.com/wp-content/uploads/2019/12/bigstock-Office-Workers-Sitting-At-Roun-288911857.jpg" alt="Workshop 1">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjfeU49APx-oCOoGEw3u3P3M5ccF4jpufV82pwgMcsfPfsl4jaK54zeU-G0UjxTBGaWMi5rOcQ1NozXp5wZz2fyH_D3oO8lpras5n3mUjLMrQzmtJYw75buWGIFcB2czx93OsVq5hZecHE/s1600/work-shop-la-gi.jpg" alt="Workshop 2">
-    </div>
-     </section> 
-    <!--sponsers content-->
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
 
-  <section class="section" id="sponsors">
-    <h2>ᴏᴜʀ 🇸​​🇵​​🇴​​🇳​​🇸​​🇴​​🇷​​🇸​</h2>
-    <p>Supported by leading companies and institutions.</p>
-    <div class="slider">
-      <img src="https://img1.wsimg.com/isteam/ip/c76862d1-4b72-4973-80c5-7d12414010ec/Sponsorluk2.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1240,h:620,cg:true" alt="Sponsor 1">
-      <img src="https://blog.10times.com/wp-content/uploads/2023/12/Trade-show_Sponsor.png" alt="Sponsor 2">
-    </div>
-    </section> 
-<!--registeration content-->
+.navbar ul li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  transition: color 0.3s;
+}
 
-   <section class="section" id="register">
-    <h2>ʀᴇɢɪꜱᴛᴇʀ ꜰᴏʀ ᴘʀᴀᴠᴀᴀʜ</h2>
-    <form id="registrationForm">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <input type="text" placeholder="College Name" required>
-      <input type="number" placeholder="mobile number" required>
-      <textarea placeholder="Message or Events Interested In"></textarea>
-      <button type="submit">Submit</button>
-    </form>
+.navbar ul li a:hover {
+  color: #ffcc00;
+}
 
-  </section>
-  <!--contact us--> 
-  
-  <section class="section" id="contact">
-    <h2>ᴄᴏɴᴛᴀᴄᴛ ᴜꜱ</h2>
-    <p>Email: srinivasminki@gmail.com</p>
-    <p>mobile number :7671**35 </p>
-    <P>name : M.SRINIVAS PRASAD</P>
-  </section> 
-  <!-- copy rights-->
-  <footer>
-    <p>&copy; 2025 PRAVAAH Fest. All rights reserved.</p>
-  </footer>
-  </div>
+/* Hero / Home Section */
+.hero {
+  height: 100vh;
+  background-image: url('https://hataftercollege.com/wp-ctent/uploads/2019/03/Cover-image-5-1024x535.jpg');
+  background-size: cover;
+  background-position: center;
+  color: rgba(0, 250, 62, 0.334);
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-</body>
-</html>
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: 0;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background-color: #397a97;
+  color: black;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Common Section Styles */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #000;
+
+}
+
+.section h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  background-color: #06221000;
+
+   text-decoration: none;
+  color: rgba(142, 88, 31, 0.781);
+  font-size: 40px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section p {
+  font-size: 18px;
+  margin-bottom: 40px;
+  background-color: #00000000;
+   text-decoration: none;
+  color: rgba(152, 85, 14, 0.781);
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Slider */
+.slider {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: scroll 15s linear infinite;
+  gap: 20px;
+  justify-content: center;
+}
+
+.slider img {
+  width: 300px;
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.slider img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+}
+
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+form input, form textarea {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #888;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #b54040;
+  color: rgb(146, 20, 20); 
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #000;
+  color: rgb(189, 97, 97);
+}
