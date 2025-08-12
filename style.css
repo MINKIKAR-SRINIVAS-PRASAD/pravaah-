@@ -56,15 +56,15 @@ body, html {
     }
 
 .logo img {
-  width: 70%;      /* make it fill the parent */
-  height: auto;     /* keeps the same ratio */
-  max-width: 200px; /* optional: limit max size */
-  display: block;   /* removes unwanted gaps */
+  width: 70%;      
+  height: auto;     
+  max-width: 200px; 
+  display: block;   
 }
 
 
 
-    /* Main content hidden initially */
+    /* Main hidden content*/
     #main-content {
       display: none;
       color: white;
@@ -80,7 +80,7 @@ body, html {
       text-align: center;
     }
 
-/* General Styles */
+/* General Style */
 body, html {
   margin: 0;
   padding: 0;
@@ -109,6 +109,7 @@ body, html {
 .navbar .logo {
   font-size: 60px;
   font-weight: bold;
+    font-weight:italic;
 }
 
 .navbar ul {
@@ -130,7 +131,7 @@ body, html {
   color: #ffcc00;
 }
 
-/* Hero / Home Section */
+/*Home Section */
 .hero {
   height: 100vh;
   background-image: url('https://hataftercollege.com/wp-ctent/uploads/2019/03/Cover-image-5-1024x535.jpg');
@@ -177,7 +178,7 @@ body, html {
   border-radius: 5px;
 }
 
-/* Common Section Styles */
+/* Common Section Style */
 .section {
   padding: 80px 20px;
   text-align: center;
@@ -298,6 +299,7 @@ footer {
   min-height: 60px;        /* ensure some height when empty */
   display: none;           /* hide initially */
 }
+
 
 
 
